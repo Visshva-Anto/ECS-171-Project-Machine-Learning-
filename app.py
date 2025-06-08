@@ -48,7 +48,7 @@ def predict():
     logreg_scaled = logreg_model.named_steps['scale'].transform(logreg_input)
     logreg_prob = logreg_model.named_steps['clf'].predict_proba(logreg_scaled)[0][1]
     logreg_pred = int(logreg_prob >= logreg_threshold)
-    predictions['Logistic Regression'] = f"{'Yes' if logreg_pred else 'No'} ({logreg_prob:.2f})"
+    predictions['(Best Model) Logistic Regression'] = f"{'Yes' if logreg_pred else 'No'} ({logreg_prob:.2f})"
 
     # Decision Tree prediction
     tree_input = np.array([[bmi, cholesterol, activity, diet]])

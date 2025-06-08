@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cardiovascular Disease Predictor</title>
+</head>
+<body>
+    <h2>Enter Health Info</h2>
+    <form action="/predict" method="post">
+        <label>BMI:</label><br>
+        <input type="number" name="bmi" step="0.1" required><br>
+
+        <label>High Cholesterol:</label><br>
+        <select name="cholesterol">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <label>Physically Active:</label><br>
+        <select name="activity">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br>
+
+        <label>Healthy Diet:</label><br>
+        <select name="diet">
+            <option value="0">Poor</option>
+            <option value="1">Healthy</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h3>Prediction: Cardiovascular Disease? <strong>{{ prediction }}</strong></h3>
+    {% endif %}
+</body>
+</html>

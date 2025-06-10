@@ -5,5 +5,5 @@ python app.py
 '''
 
 If the above does not work and throws errors you many need to install few libraries.
-Few libraries tha you may need to install are Flask '''pip install FLask''' and Imbalanced-Learn'''pip install imbalanced-learn'''.
+Few libraries tha you may need to install are Flask '''pip install Flask''' and Imbalanced-Learn'''pip install imbalanced-learn'''.
 
